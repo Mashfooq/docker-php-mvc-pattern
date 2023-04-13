@@ -18,7 +18,7 @@ class Users extends Connection
     }
 
 
-    //for Register
+    //fmethod checks if the given email already exists in the users table. Returns true if it exists, false if it doesn't.
     public function checkEmailExist($user_email)
     {
         $stmt = $this->_connection->prepare("SELECT * FROM users WHERE user_email = ?");
@@ -32,7 +32,7 @@ class Users extends Connection
         }
     }
 
-
+    // method saves the user details (email, name, password) to the users table, along with the current date and time as created_on. Returns true if the insert is successful, false if it fails.
     public function saveUserDetail($user_email, $user_name, $user_password)
     {
         $created_on = date("Y-m-d H:i:s"); // get current date and time
@@ -47,7 +47,7 @@ class Users extends Connection
         }
     }
 
-
+    // method retrieves the user data from the users table based on the given email. 
     public function getUserByEmailAndPassword($user_email, $user_password) {
         $stmt = $this->_connection->prepare("SELECT * FROM users WHERE user_email = ?");
         $stmt->execute([$user_email]);
@@ -58,6 +58,7 @@ class Users extends Connection
         }
     
         $hashed_password = $user['user_password'];
+        // f the user is found and the password matches, returns the user data. If the user is found and the password matches, returns the user data. 
         if (password_verify($user_password, $hashed_password)) {
             // return user data
             return $user;
@@ -74,7 +75,7 @@ class Users extends Connection
     }
     
     public function signOut($userId){
-
+        // method destroys the current session and returns true.
         session_destroy();
         return true;
 

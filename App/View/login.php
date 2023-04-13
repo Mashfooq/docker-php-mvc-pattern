@@ -43,6 +43,7 @@
         </form>
     </div>
     <?php
+    //if session message is set then this block of code will be excecuted
     if (isset($_SESSION['message'])) {
         $message = $_SESSION['message'];
         unset($_SESSION['message']);

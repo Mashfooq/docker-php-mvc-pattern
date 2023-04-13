@@ -1,11 +1,11 @@
 
-CREATE TABLE accounts (
+CREATE TABLE users (
 	user_id serial PRIMARY KEY,
-	username VARCHAR ( 50 ) UNIQUE NOT NULL,
-	password VARCHAR ( 50 ) NOT NULL,
-	email VARCHAR ( 255 ) UNIQUE NOT NULL,
-	created_on TIMESTAMP NOT NULL,
-        last_login TIMESTAMP 
+	user_name VARCHAR ( 50 ) UNIQUE NOT NULL,
+	user_password VARCHAR ( 250 ) NOT NULL,
+	user_email VARCHAR ( 255 ) UNIQUE NOT NULL,
+	created_on TIMESTAMP(6) NOT NULL,
+    last_login TIMESTAMP 
 );
 
 

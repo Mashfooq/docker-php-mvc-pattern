@@ -35,7 +35,7 @@ class RegisterController
             exit();
         }
 
-        // register user
+        // register or save users detail
         $registerResult = $userModel->saveUserDetail($userEmail, $userName, $userPassword);
 
         if ($registerResult) {

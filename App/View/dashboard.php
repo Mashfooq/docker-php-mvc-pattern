@@ -41,7 +41,7 @@
 	<!-- Main Content -->
 	<div class="container">
 		<h1>Welcome <?php echo $user_name;?></h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel turpis commodo, consequat tortor nec, tempor quam. Fusce bibendum feugiat leo, in tincidunt tellus. Praesent non tellus ut velit facilisis luctus sed ut justo. Donec eget consequat nisl. Sed rutrum bibendum sapien, sed volutpat risus commodo vel.</p>
+		<p>Welcome to our website! We're thrilled that you've chosen to visit us today. We hope that our website provides you with the information and resources you need, and we're here to assist you every step of the way.</p>
 	</div>
 
 </body>
